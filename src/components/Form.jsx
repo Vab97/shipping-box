@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { shippingCostCalculator } from "../services/shippingCostCalculator";
 import { addBoxToDB } from "../services/service";
-
+import { ShippingBoxContext } from "../context/shippingBoxContext";
 export const FormComponent = () => {
   const [box, setBox] = useState({
     receiverName: "",
@@ -10,6 +10,8 @@ export const FormComponent = () => {
     destinationCountry: "",
   });
   const [error, setError] = useState("");
+  const { addBox } = useContext(ShippingBoxContext);
+
   const handlesaveAddBox = () => {
     if (
       !box?.receiverName ||
@@ -32,6 +34,10 @@ export const FormComponent = () => {
     );
 
     addBoxToDB({ ...box, shippingCost: shippingCostPerCountry });
+    addBox({
+      ...box,
+      shippingCost: shippingCostPerCountry,
+    });
     alert("Box added successfully");
     setError("");
     setBox({
