@@ -1,4 +1,4 @@
-import { createContext, useEffect } from "react";
+import { createContext, useEffect, useState } from "react";
 import { getBoxesFromDB } from "../services/service";
 
 export const ShippingBoxContext = createContext();

@@ -64,7 +64,7 @@ export const FormComponent = () => {
       </div>
       <div className="space-y-2">
         <label className="text-sm font-medium" htmlFor="weight">
-          Weight
+          Weight in kg
         </label>
         <input
           className="w-full h-9 px-3 py-1 border rounded-md bg-gray-10 text-sm"
