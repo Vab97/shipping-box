@@ -22,7 +22,28 @@ npm run dev
 The application will be available at:
 http://localhost:5173
 
+# Packges used apart from built in vite + react setup
+Tailwind and React DOM
+
+# Folder structure 
+src/
+    components/ - for form and table reusable component
+    constants/ - for constants
+    context/ - state management implementation
+    Pages/ - combining components and redneing page
+    services/ - for writing business logic and api
+
 
 # MOCK API Endpoints
 addBoxToDB
 getBoxesFromDB
+
+# Fetaures
+1.Add shipping box details through a form
+2.Field validation and error handling
+3.Negative weight validation
+4.Shipping cost calculation per country
+5.Color preview for selected box color
+
+# For state management
+context api is used
