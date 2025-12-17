@@ -1,10 +1,10 @@
 import React from "react";
 import { Navbar } from "./Navbar";
 
-export const Layout = ({children}) => {
+export const Layout = ({ children }) => {
   return (
-    <div className="bg-gray-50">
-      <div>
+    <div className="bg-gray-50 min-h-screen">
+      <div className="my-2 bg-white">
         <Navbar />
       </div>
       <main className="p-6">
